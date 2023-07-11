@@ -1,0 +1,3 @@
+# Chown ES folder to avoid permission & launch issues
+
+chown -R $RUN_USER:$RUN_GROUP /usr/share/elasticsearch
