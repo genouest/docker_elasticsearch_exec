@@ -1,4 +1,4 @@
-# BEAURES
+# docker_elasticsearch_exec
 
 Custom Docker image to be used with [BEAURIS](https://gitlab.com/beaur1s/beauris)
 
