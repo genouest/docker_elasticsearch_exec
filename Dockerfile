@@ -4,7 +4,7 @@ USER root
 
 RUN apt-get -q update \
     && DEBIAN_FRONTEND=noninteractive apt-get -yq --no-install-recommends install \
-        python3 python3-pip git \
+        python3 python3-pip python-is-python3 git \
     && rm -rf /var/lib/apt/lists/*
 
 ADD entrypoint.sh /
