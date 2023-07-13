@@ -13,5 +13,3 @@ ADD /scripts/ /scripts/
 ENV RUN_USER='elasticsearch'
 
 ENTRYPOINT ["/entrypoint.sh"]
-
-CMD ["/bin/bash"]
