@@ -8,3 +8,13 @@ NB: Due to bash limitation (no dot in variable name), the usual ES env variables
 
 You can avoid this by setting the "ES_ARGS" variable, and it will be added to the launch script.
 Please include the "-E" before your variable, like so: *-Ediscovery.type=single-node*
+
+If no user command is provided, it will simply launch ES in the foreground.
+
+Available env variables:
+
+```
+ES_ARGS: (Optional) ES env variables, formatted as such: "-Ediscovery.type=single-node"
+RUN_USER: (Optional, require UID) Custom ES user
+UID: (Optional), require RUN_USER) Custom ES user UID
+```
