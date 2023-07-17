@@ -2,3 +2,8 @@ if [ -n "$UID" ]; then
 	UIDoption="--uid $UID"
 	id -u $RUN_USER &> /dev/null || useradd -d /tmp/$RUN_USER --create-home --no-user-group $UIDoption $RUN_USER
 fi
+
+if [ -n "$ES_UID" ]; then
+	UIDoption="--uid $UID"
+	id -u $ES_USER &> /dev/null || useradd -d /tmp/$ES_USER --create-home --no-user-group $UIDoption $ES_USER
+fi

@@ -15,6 +15,8 @@ Available env variables:
 
 ```
 ES_ARGS: (Optional) ES env variables, formatted as such: "-Ediscovery.type=single-node"
-RUN_USER: (Optional, require UID) Custom ES user
-UID: (Optional), require RUN_USER) Custom ES user UID
+ES_USER: (Optional, require UID) Custom ES user. Default to 'elasticsearch'
+ES_UID: (Optional), require RUN_USER) Custom ES user UID.
+RUN_USER: (Optional, require UID) Custom user for custom command
+UID: (Optional), require RUN_USER) Custom user UID for custom command
 ```

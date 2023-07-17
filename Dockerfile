@@ -10,6 +10,7 @@ RUN apt-get -q update \
 ADD entrypoint.sh /
 ADD /scripts/ /scripts/
 
-ENV RUN_USER='elasticsearch'
+ENV RUN_USER='elasticsearch' \
+    ES_USER='elasticsearch'
 
 ENTRYPOINT ["/entrypoint.sh"]

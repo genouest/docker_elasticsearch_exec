@@ -36,9 +36,9 @@ run_scripts pre-launch
 
 # Default to launching ES if no parameters passed
 if [ $# -eq 0 ]; then
-	su $RUN_USER -c '/usr/local/bin/docker-entrypoint.sh eswrapper $ES_ARGS'
+	su $ES_USER -c '/usr/local/bin/docker-entrypoint.sh eswrapper $ES_ARGS'
 else
-	su $RUN_USER -c '/usr/local/bin/docker-entrypoint.sh eswrapper $ES_ARGS > /tmp/es.log 2>&1 &'
+	su $ES_USER -c '/usr/local/bin/docker-entrypoint.sh eswrapper $ES_ARGS > /tmp/es.log 2>&1 &'
 	wait_es
 	exec "$@"
 fi
