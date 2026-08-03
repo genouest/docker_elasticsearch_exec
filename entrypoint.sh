@@ -14,7 +14,7 @@ function run_scripts () {
 }
 
 function wait_es(){
-  timeout --foreground -s TERM 180s bash -c \
+  timeout --foreground -s TERM 300s bash -c \
        'while [[ "$(curl -s -o /dev/null -m 3 -L -w ''%{http_code}'' localhost:9200)" != "200" ]];\
        do echo "Waiting for Elasticsearch" && sleep 2;\
        done'
@@ -23,7 +23,7 @@ function wait_es(){
         echo "Elasticsearch running"
         return
   else
-        echo "Error: Elasticsearch not running after 180s"
+        echo "Error: Elasticsearch not running after 300s"
         if [ -f "/tmp/es.log" ]; then
           echo "Printing logs"
           cat /tmp/es.log
